@@ -4,7 +4,7 @@
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas:
     'nav main weather'
-    'nav main side'
+    'nav main gif'
     'nav main side';
   width: 100%;
   max-width: 100vw;
@@ -23,10 +23,15 @@
 
 .side {
   grid-area: side;
-  background-color: var(--background);
 }
 .weather {
   grid-area: weather;
   background-color: var(--background);
+  display: flex;
+}
+
+.gif {
+  background-color: var(--background);
+  grid-area: gif;
   display: flex;
 }

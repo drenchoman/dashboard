@@ -11,9 +11,10 @@ export default async function Home() {
       <div className={styles.weather}>
         <Weather />
       </div>
-      <div className={styles.side}>
+      <div className={styles.gif}>
         <Gif />
       </div>
+      <div className={styles.side}></div>
     </main>
   );
 }
