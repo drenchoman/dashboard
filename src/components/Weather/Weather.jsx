@@ -2,6 +2,9 @@ import React from 'react';
 import { TbTemperatureCelsius } from 'react-icons/tb';
 import Image from 'next/image';
 import styles from './weather.module.css';
+import { Inter } from '@next/font/google';
+
+const inter = Inter({ subsets: ['latin'] });
 
 async function getData() {
   const res = await fetch(
@@ -27,7 +30,8 @@ export default async function Weather() {
     weather[0].description.slice(1);
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${inter.className}`}>
+      <span className={styles.tag}>Weather</span>
       <h3>{name}</h3>
       <div className={styles.row}>
         <span>{desc}</span>
@@ -47,6 +51,7 @@ export default async function Weather() {
           <p className={styles.tempNum}>{parseInt(main.temp)}</p>
           <TbTemperatureCelsius className={styles.temp} />
         </div>
+
         <div className={styles.stats}>
           <ul>
             <li>Feels like: {parseInt(main.feels_like)}°</li>

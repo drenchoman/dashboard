@@ -1,8 +1,7 @@
 import Image from 'next/image';
-import { Inter } from '@next/font/google';
 import styles from './page.module.css';
 import Weather from '@/components/Weather/Weather';
-const inter = Inter({ subsets: ['latin'] });
+import Gif from '@/components/Gif/Gif';
 
 export default async function Home() {
   return (
@@ -12,7 +11,9 @@ export default async function Home() {
       <div className={styles.weather}>
         <Weather />
       </div>
-      <div className={styles.side}>Side</div>
+      <div className={styles.side}>
+        <Gif />
+      </div>
     </main>
   );
 }
