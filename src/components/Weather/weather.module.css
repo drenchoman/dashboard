@@ -1,0 +1,56 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.container > h3 {
+  font-size: 2rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.row > span {
+  font-size: 0.9rem;
+  font-weight: 200;
+  margin: 0.5rem 0;
+  align-self: flex-start;
+}
+
+.weather {
+  align-items: center;
+}
+.info {
+  display: flex;
+
+  justify-content: space-around;
+}
+
+.temp {
+  position: relative;
+  bottom: 1rem;
+}
+
+.tempNum {
+  font-size: 4rem;
+}
+
+.stats {
+  width: 100%;
+}
+.stats > ul {
+  padding: 0;
+}
+
+.stats > ul > li {
+  list-style: none;
+  margin: 0.1rem 0;
+}

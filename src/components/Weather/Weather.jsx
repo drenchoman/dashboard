@@ -1,6 +1,7 @@
 import React from 'react';
 import { TbTemperatureCelsius } from 'react-icons/tb';
 import Image from 'next/image';
+import styles from './weather.module.css';
 
 async function getData() {
   const res = await fetch(
@@ -21,23 +22,38 @@ async function getData() {
 export default async function Weather() {
   const data = await getData();
   const { main, name, weather } = data;
+  const desc =
+    weather[0].description.charAt(0).toUpperCase() +
+    weather[0].description.slice(1);
 
   return (
-    <div>
-      <h3>Weather in {name}</h3>
-      <p>
-        <TbTemperatureCelsius />
-        {main.temp}
-      </p>
-      <div>
-        <p>{weather[0].main}</p>
-        <div>
+    <div className={styles.container}>
+      <h3>{name}</h3>
+      <div className={styles.row}>
+        <span>{desc}</span>
+
+        <div className={styles.image}>
           <Image
             width={30}
             height={30}
             src={`http://openweathermap.org/img/wn/${weather[0].icon}@2x.png`}
             alt="weather"
           />
+        </div>
+      </div>
+
+      <div className={styles.info}>
+        <div className={styles.row}>
+          <p className={styles.tempNum}>{parseInt(main.temp)}</p>
+          <TbTemperatureCelsius className={styles.temp} />
+        </div>
+        <div className={styles.stats}>
+          <ul>
+            <li>Feels like: {parseInt(main.feels_like)}°</li>
+            <li>Today&apos;s high: {parseInt(main.temp_max)}°</li>
+            <li>Today&apos;s low: {parseInt(main.temp_min)}°</li>
+            <li>Humidty: {parseInt(main.humidity)}%</li>
+          </ul>
         </div>
       </div>
     </div>

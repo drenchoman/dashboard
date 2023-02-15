@@ -3,7 +3,7 @@
   grid-template-columns: 20% 1fr 20%;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas:
-    'nav main side'
+    'nav main weather'
     'nav main side'
     'nav main side';
   width: 100%;
@@ -24,4 +24,9 @@
 .side {
   grid-area: side;
   background-color: aquamarine;
+}
+.weather {
+  grid-area: weather;
+  background-color: black;
+  display: flex;
 }
