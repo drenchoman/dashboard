@@ -1,7 +1,7 @@
 import React from 'react';
 import { TbTemperatureCelsius } from 'react-icons/tb';
 import Image from 'next/image';
-import styles from './weather.module.css';
+import styles from './Weather.module.css';
 import { Inter } from '@next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -31,34 +31,37 @@ export default async function Weather() {
 
   return (
     <div className={`${styles.container} ${inter.className}`}>
-      <span className={styles.tag}>Weather</span>
-      <h3>{name}</h3>
-      <div className={styles.row}>
-        <span>{desc}</span>
+      <span className={styles.tag}>Today&apos;s Weather</span>
+      <h3 className={styles.header}>{name}</h3>
 
-        <div className={styles.image}>
-          <Image
-            width={30}
-            height={30}
-            src={`http://openweathermap.org/img/wn/${weather[0].icon}@2x.png`}
-            alt="weather"
-          />
-        </div>
-      </div>
-
-      <div className={styles.info}>
+      <div className={styles.wrapper}>
         <div className={styles.row}>
-          <p className={styles.tempNum}>{parseInt(main.temp)}</p>
-          <TbTemperatureCelsius className={styles.temp} />
+          <span>{desc}</span>
+
+          <div className={styles.image}>
+            <Image
+              width={30}
+              height={30}
+              src={`http://openweathermap.org/img/wn/${weather[0].icon}@2x.png`}
+              alt="weather"
+            />
+          </div>
         </div>
 
-        <div className={styles.stats}>
-          <ul>
-            <li>Feels like: {parseInt(main.feels_like)}°</li>
-            <li>Today&apos;s high: {parseInt(main.temp_max)}°</li>
-            <li>Today&apos;s low: {parseInt(main.temp_min)}°</li>
-            <li>Humidty: {parseInt(main.humidity)}%</li>
-          </ul>
+        <div className={styles.info}>
+          <div className={styles.row}>
+            <p className={styles.tempNum}>{parseInt(main.temp)}</p>
+            <TbTemperatureCelsius className={styles.temp} />
+          </div>
+
+          <div className={styles.stats}>
+            <ul>
+              <li>Feels like: {parseInt(main.feels_like)}°</li>
+              <li>Today&apos;s high: {parseInt(main.temp_max)}°</li>
+              <li>Today&apos;s low: {parseInt(main.temp_min)}°</li>
+              <li>Humidty: {parseInt(main.humidity)}%</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

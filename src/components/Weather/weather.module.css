@@ -1,13 +1,17 @@
 .container {
   display: flex;
   flex-direction: column;
-  padding: 0.5rem;
   justify-content: center;
   width: 100%;
 }
 
-.container > h3 {
+.header {
   font-size: 2rem;
+  text-align: center;
+}
+
+.wrapper {
+  padding: var(--padding-md);
 }
 
 .row {
@@ -40,7 +44,7 @@
 }
 
 .tempNum {
-  font-size: 4rem;
+  font-size: 5rem;
 }
 
 .stats {
