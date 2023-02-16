@@ -28,13 +28,14 @@ export default async function Gif() {
   return (
     <div className={inter.className}>
       <span className={styles.tag}>Random Gif</span>
-
-      <Image
-        src={url.url}
-        width={url.width}
-        height={300}
-        alt="test"
-      />
+      <div>
+        <Image
+          src={url.url}
+          width={url.width}
+          height={250}
+          alt="test"
+        />
+      </div>
     </div>
   );
 }
