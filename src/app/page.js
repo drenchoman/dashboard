@@ -5,11 +5,19 @@ import Gif from '@/components/Gif/Gif';
 import SpotifyTracks from '@/components/Spotify/SpotifyTracks';
 import SpotifyArtists from '@/components/Spotify/SpotifyArtists';
 import Theme from '@/components/Theme/Theme';
+import Welcome from '@/components/Welcome/Welcome';
+import PremLeague from '@/components/PremLeague/PremLeague';
 
 export default async function Home() {
   return (
     <main className={styles.grid}>
       <section className={styles.nav}>
+        <div className={styles.welcome}>
+          <Welcome />
+        </div>
+        <div className={styles.premTable}>
+          <PremLeague />
+        </div>
         <div className={styles.theme}>
           <Theme />
         </div>
@@ -18,12 +26,8 @@ export default async function Home() {
         <SpotifyTracks />
       </div>
       <section className={styles.right}>
-        <div className={styles.weather}>
-          <Weather />
-        </div>
-        <div className={styles.gif}>
-          <Gif />
-        </div>
+        <div className={styles.weather}>{/* <Weather /> */}</div>
+        <div className={styles.gif}>{/* <Gif /> */}</div>
         <div className={styles.artists}>
           <SpotifyArtists />
         </div>

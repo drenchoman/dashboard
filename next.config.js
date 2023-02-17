@@ -59,6 +59,18 @@ const nextConfig = {
         port: '',
         pathname: '/image/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'a.espncdn.com',
+        port: '',
+        pathname: '/i/teamlogos/**',
+      },
     ],
   },
 };

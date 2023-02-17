@@ -1,6 +1,6 @@
 .grid {
   display: grid;
-  grid-template-columns: 20% 1fr 20%;
+  grid-template-columns: 25% 1fr 20%;
   /* grid-auto-rows: 1fr; */
   grid-template-rows: 1fr;
   grid-template-areas:
@@ -30,6 +30,8 @@
   background-color: var(--component);
   display: flex;
   gap: 10px;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .main {
@@ -70,4 +72,20 @@
   border-radius: var(--border-radius);
   padding: var(--padding-md);
   width: 100%;
+}
+
+.welcome {
+  display: flex;
+  align-self: flex-start;
+  border-radius: var(--border-radius);
+  padding: var(--padding-md);
+  width: 100%;
+  justify-content: center;
+}
+
+.premTable {
+  display: flex;
+  border-radius: var(--border-radius);
+  padding: var(--padding-md);
+  justify-content: center;
 }

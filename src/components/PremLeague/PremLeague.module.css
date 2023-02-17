@@ -1,0 +1,33 @@
+.tag {
+  font-size: 0.6rem;
+  font-weight: 600;
+  margin: 0.25rem 0;
+  justify-self: flex-start;
+}
+
+.table > thead > tr > th {
+  /* text-align: center; */
+  padding: 0 0.3rem;
+}
+
+.table {
+  text-align: center;
+}
+
+.club {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.club > img {
+  margin: 0 0.25rem;
+}
+
+@media screen and (max-width: 1600px) {
+  .club > img {
+    display: none;
+  }
+}
