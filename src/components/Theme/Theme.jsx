@@ -15,12 +15,41 @@ export default function Theme() {
 
   if (!mounted) return null;
   return (
-    <div className={inter.className}>
-      <div>
-        <button onClick={() => setTheme('pink')}>Pink Mode</button>
-        <button onClick={() => setTheme('light')}>Light Mode</button>
-        <button onClick={() => setTheme('dark')}>Dark Mode</button>
-        <button onClick={() => setTheme('green')}>Green Mode</button>
+    <div className={`${inter.className} ${styles.container}`}>
+      <span className={styles.tag}>Theme Selector</span>
+      <div className={styles.wrapper}>
+        <button
+          className={
+            theme == 'pink' ? styles.selected : styles.button
+          }
+          onClick={() => setTheme('pink')}
+        >
+          Pink
+        </button>
+        <button
+          className={
+            theme == 'light' ? styles.selected : styles.button
+          }
+          onClick={() => setTheme('light')}
+        >
+          Light
+        </button>
+        <button
+          className={
+            theme == 'dark' ? styles.selected : styles.button
+          }
+          onClick={() => setTheme('dark')}
+        >
+          Dark
+        </button>
+        <button
+          className={
+            theme == 'green' ? styles.selected : styles.button
+          }
+          onClick={() => setTheme('green')}
+        >
+          Green
+        </button>
       </div>
     </div>
   );

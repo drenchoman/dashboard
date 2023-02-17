@@ -9,10 +9,13 @@ import Theme from '@/components/Theme/Theme';
 export default async function Home() {
   return (
     <main className={styles.grid}>
-      <div className={styles.nav}>Nav</div>
+      <section className={styles.nav}>
+        <div className={styles.theme}>
+          <Theme />
+        </div>
+      </section>
       <div className={styles.main}>
         <SpotifyTracks />
-        <Theme />
       </div>
       <section className={styles.right}>
         <div className={styles.weather}>

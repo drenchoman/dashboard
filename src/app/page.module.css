@@ -28,6 +28,8 @@
 .nav {
   grid-area: nav;
   background-color: var(--component);
+  display: flex;
+  gap: 10px;
 }
 
 .main {
@@ -60,4 +62,12 @@
   align-items: flex-start;
   border-radius: var(--border-radius);
   /* flex-grow: 2; */
+}
+
+.theme {
+  display: flex;
+  align-self: flex-end;
+  border-radius: var(--border-radius);
+  padding: var(--padding-md);
+  width: 100%;
 }
