@@ -8,6 +8,7 @@ import Theme from '@/components/Theme/Theme';
 import Welcome from '@/components/Welcome/Welcome';
 import PremLeague from '@/components/PremLeague/PremLeague';
 import ALeague from '@/components/ALeague/Aleague';
+import Motivation from '@/components/Motivation/Motivation';
 
 export default async function Home() {
   return (
@@ -15,6 +16,9 @@ export default async function Home() {
       <section className={styles.nav}>
         <div className={styles.welcome}>
           <Welcome />
+        </div>
+        <div className={styles.motivation}>
+          <Motivation />
         </div>
         <div className={styles.tracks}>
           <SpotifyTracks />

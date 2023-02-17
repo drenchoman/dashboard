@@ -1,0 +1,9 @@
+.tag {
+  font-size: 0.6rem;
+  font-weight: 600;
+  margin: 0.25rem 0;
+}
+
+.container > p {
+  font-weight: 300;
+}

@@ -43,6 +43,11 @@
 
 /* Tracks */
 
+.tracksContainer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
 .wrapper {
   display: flex;
   flex-direction: row-reverse;

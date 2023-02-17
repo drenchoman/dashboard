@@ -5,10 +5,22 @@
 .container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
+  flex-direction: column;
 }
 
-.container > h1 {
+.welcome {
+  display: flex;
+}
+
+.welcome > h1 {
   margin: 0 var(--margin-md);
   text-align: center;
+}
+
+.info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-weight: 300;
 }
