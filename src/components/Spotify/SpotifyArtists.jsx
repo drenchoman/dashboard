@@ -40,6 +40,13 @@ export default async function SpotifyArtists() {
       <div className={styles.container}>
         {artists.map((artist, i) => (
           <div className={styles.artist} key={i}>
+            <span className={styles.ranking}>#{i + 1}</span>
+            <Image
+              src={artist.coverImage.url}
+              width={40}
+              height={40}
+              alt="Artist"
+            />
             <h3>
               <a
                 rel="noopener noreferrer"
@@ -49,12 +56,6 @@ export default async function SpotifyArtists() {
                 {artist.name}
               </a>
             </h3>
-            <Image
-              src={artist.coverImage.url}
-              width={40}
-              height={40}
-              alt="Artist"
-            />
           </div>
         ))}
       </div>

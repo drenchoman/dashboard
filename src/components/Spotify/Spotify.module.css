@@ -2,7 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  align-items: stretch;
   height: 100%;
 }
 
@@ -14,14 +15,28 @@
 
 .artist {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0.25rem;
+  margin: var(--margin-sm);
+  padding: var(--padding-sm);
+
+  position: relative;
+  /* border: 1px solid red; */
+  flex-basis: 100px;
+  max-height: 120px;
 }
 
 .artist > h3 {
   font-size: 1rem;
   font-weight: 300;
-  margin: 0.25rem 0;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.ranking {
+  position: absolute;
+  top: 0.1rem;
+  left: 0;
+  font-weight: 300;
 }

@@ -12,6 +12,7 @@
 
 .wrapper {
   padding: var(--padding-md);
+  padding-top: 0;
 }
 
 .row {

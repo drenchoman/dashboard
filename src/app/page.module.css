@@ -1,11 +1,12 @@
 .grid {
   display: grid;
   grid-template-columns: 20% 1fr 20%;
-  grid-template-rows: 30% 1fr 1fr;
+  /* grid-auto-rows: 1fr; */
+  grid-template-rows: 1fr;
   grid-template-areas:
-    'nav main weather'
-    'nav main gif'
-    'nav main artists';
+    'nav main right'
+    'nav main right'
+    'nav main right';
   width: 100%;
   max-width: 100vw;
   height: 100%;
@@ -14,6 +15,14 @@
   gap: 10px;
   background-color: var(--background);
   padding: var(--padding-lg);
+}
+
+.right {
+  grid-area: right;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* flex-grow: 2; */
 }
 
 .nav {
@@ -32,6 +41,7 @@
   background-color: var(--component);
   padding: var(--padding-md);
   border-radius: var(--border-radius);
+  flex-grow: 2;
 }
 .weather {
   grid-area: weather;
@@ -39,6 +49,7 @@
   display: flex;
   padding: var(--padding-md);
   border-radius: var(--border-radius);
+  /* flex-grow: 2; */
 }
 
 .gif {
@@ -48,4 +59,5 @@
   padding: var(--padding-md);
   align-items: flex-start;
   border-radius: var(--border-radius);
+  /* flex-grow: 2; */
 }
