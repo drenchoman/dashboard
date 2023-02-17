@@ -36,6 +36,10 @@
 
 .main {
   grid-area: main;
+  /* gap: 10px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .artists {
@@ -83,9 +87,25 @@
   justify-content: center;
 }
 
+.football {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
 .premTable {
   display: flex;
   border-radius: var(--border-radius);
   padding: var(--padding-md);
   justify-content: center;
+  flex-grow: 1.5;
+}
+
+.aLeagueTable {
+  display: flex;
+  border-radius: var(--border-radius);
+  padding: var(--padding-md);
+  justify-content: center;
+  flex-grow: 1.5;
 }

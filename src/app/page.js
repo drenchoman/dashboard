@@ -7,6 +7,7 @@ import SpotifyArtists from '@/components/Spotify/SpotifyArtists';
 import Theme from '@/components/Theme/Theme';
 import Welcome from '@/components/Welcome/Welcome';
 import PremLeague from '@/components/PremLeague/PremLeague';
+import ALeague from '@/components/ALeague/Aleague';
 
 export default async function Home() {
   return (
@@ -15,16 +16,24 @@ export default async function Home() {
         <div className={styles.welcome}>
           <Welcome />
         </div>
-        <div className={styles.premTable}>
-          <PremLeague />
+        <div className={styles.tracks}>
+          <SpotifyTracks />
         </div>
+
         <div className={styles.theme}>
           <Theme />
         </div>
       </section>
-      <div className={styles.main}>
-        <SpotifyTracks />
-      </div>
+      <section className={styles.main}>
+        <section className={styles.football}>
+          <div className={styles.premTable}>
+            <PremLeague />
+          </div>
+          <div className={styles.aLeagueTable}>
+            <ALeague />
+          </div>
+        </section>
+      </section>
       <section className={styles.right}>
         <div className={styles.weather}>{/* <Weather /> */}</div>
         <div className={styles.gif}>{/* <Gif /> */}</div>
