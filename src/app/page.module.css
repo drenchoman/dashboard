@@ -51,6 +51,14 @@
   border-radius: var(--border-radius);
   flex-grow: 2;
 }
+
+.tracks {
+  display: flex;
+  overflow: scroll;
+  background-color: var(--component);
+  padding: var(--padding-md);
+  border-radius: var(--border-radius);
+}
 .weather {
   grid-area: weather;
   background-color: var(--component);

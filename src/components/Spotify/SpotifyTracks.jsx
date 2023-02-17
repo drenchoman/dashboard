@@ -41,16 +41,27 @@ export default async function SpotifyTracks() {
 
   return (
     <div className={inter.className}>
-      <span>Top Tracks</span>
+      <span className={styles.tag}>Top Tracks</span>
       {tracks.map((track, i) => (
-        <div key={i}>
-          <h3>{track.title}</h3>
-          <p>{track.artist}</p>
+        <div className={styles.wrapper} key={i}>
+          <div className={styles.info}>
+            <h3>
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href={track.url}
+              >
+                {track.title}
+              </a>
+            </h3>
+            <p>{track.artist}</p>
+          </div>
+
           <Image
             src={track.coverImage.url}
             alt="Image"
-            width={40}
-            height={40}
+            width={100}
+            height={100}
           />
         </div>
       ))}

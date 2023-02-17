@@ -35,8 +35,10 @@ export default async function Home() {
         </section>
       </section>
       <section className={styles.right}>
-        <div className={styles.weather}>{/* <Weather /> */}</div>
-        <div className={styles.gif}>{/* <Gif /> */}</div>
+        <div className={styles.weather}>
+          {/* <Weather /> </div>
+        <div className={styles.gif}>{/* <Gif /> */}
+        </div>
         <div className={styles.artists}>
           <SpotifyArtists />
         </div>

@@ -40,3 +40,28 @@
   left: 0;
   font-weight: 300;
 }
+
+/* Tracks */
+
+.wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: var(--margin-md) 0;
+}
+
+.info {
+  display: flex;
+  padding: var(--padding-md);
+  flex-direction: column;
+  width: 100%;
+}
+
+.info > h3 {
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.info > p {
+  font-size: 1rem;
+  font-weight: 200;
+}
