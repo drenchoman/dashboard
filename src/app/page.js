@@ -14,7 +14,7 @@ export default async function Home() {
         <SpotifyTracks />
         <Theme />
       </div>
-      <div className={styles.right}>
+      <section className={styles.right}>
         <div className={styles.weather}>
           <Weather />
         </div>
@@ -24,7 +24,7 @@ export default async function Home() {
         <div className={styles.artists}>
           <SpotifyArtists />
         </div>
-      </div>
+      </section>
     </main>
   );
 }

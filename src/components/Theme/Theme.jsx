@@ -16,8 +16,12 @@ export default function Theme() {
   if (!mounted) return null;
   return (
     <div className={inter.className}>
-      The theme is {theme}
-      <button></button>
+      <div>
+        <button onClick={() => setTheme('pink')}>Pink Mode</button>
+        <button onClick={() => setTheme('light')}>Light Mode</button>
+        <button onClick={() => setTheme('dark')}>Dark Mode</button>
+        <button onClick={() => setTheme('green')}>Green Mode</button>
+      </div>
     </div>
   );
 }
