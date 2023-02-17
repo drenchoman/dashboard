@@ -2,8 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: space-around;
-  align-items: stretch;
+  margin: 0 var(--margin-lg);
+  /* justify-content: center; */
   height: 100%;
 }
 
@@ -15,30 +15,35 @@
 
 .artist {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  /* width: 100%; */
+  /* justify-content: space-evenly; */
   margin: var(--margin-sm);
   padding: var(--padding-sm);
 
   position: relative;
-  /* border: 1px solid red; */
-  flex-basis: 100px;
-  max-height: 120px;
 }
 
 .artist > h3 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 300;
-  margin: 0.5rem 0;
-  text-align: center;
+  margin: 0.5rem;
+}
+
+.artistInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .ranking {
   position: absolute;
-  top: 0.1rem;
-  left: 0;
-  font-weight: 300;
+  top: 0rem;
+  left: -1.55rem;
+  width: 100%;
+  margin: 0 0.25rem;
+  font-weight: 200;
 }
 
 /* Tracks */

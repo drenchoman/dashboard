@@ -43,10 +43,11 @@ export default async function SpotifyArtists() {
             <span className={styles.ranking}>#{i + 1}</span>
             <Image
               src={artist.coverImage.url}
-              width={40}
-              height={40}
+              width={100}
+              height={100}
               alt="Artist"
             />
+
             <h3>
               <a
                 rel="noopener noreferrer"
