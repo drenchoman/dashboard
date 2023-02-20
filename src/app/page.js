@@ -9,6 +9,7 @@ import Welcome from '@/components/Welcome/Welcome';
 import PremLeague from '@/components/PremLeague/PremLeague';
 import ALeague from '@/components/ALeague/Aleague';
 import Motivation from '@/components/Motivation/Motivation';
+import Crypto from '@/components/Crypto/Crypto';
 
 export default async function Home() {
   return (
@@ -36,6 +37,7 @@ export default async function Home() {
           <div className={styles.aLeagueTable}>
             <ALeague />
           </div>
+          <Crypto />
         </section>
       </section>
       <section className={styles.right}>
