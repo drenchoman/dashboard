@@ -25,7 +25,14 @@ export default async function Crypto() {
   return (
     <div>
       <span className={styles.tag}>Crypto Tracker</span>
-      <div></div>
+      <div>
+        {data.map((cryp) => (
+          <div key={cryp.rank}>
+            <h3>{cryp.name}</h3>
+            <p>{cryp.price}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
