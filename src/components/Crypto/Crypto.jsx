@@ -7,7 +7,16 @@ async function getData() {
   if (!res.ok) {
     throw new Error('Failed to fetch data');
   }
-  return res.json();
+
+  const { data } = await res.json();
+  const top2 = data.slice(0, 2).map((cryp) => ({
+    rank: cryp.rank,
+    symbol: cryp.symbol,
+    name: cryp.name,
+    price: cryp.priceUsd,
+    change: cryp.changePercent24Hr,
+  }));
+  return top2;
 }
 
 export default async function Crypto() {
@@ -16,7 +25,7 @@ export default async function Crypto() {
   return (
     <div>
       <span className={styles.tag}>Crypto Tracker</span>
-      <div></div>Crypto
+      <div></div>
     </div>
   );
 }
