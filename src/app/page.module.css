@@ -94,7 +94,6 @@
   border-radius: var(--border-radius);
   padding: var(--padding-md);
   width: 100%;
-  justify-content: center;
 }
 
 .motivation {

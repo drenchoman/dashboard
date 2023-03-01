@@ -24,6 +24,7 @@ async function getData() {
   return top2;
 }
 
+// Not used Currently
 async function getTop10() {
   const res = await fetch('https://api.coincap.io/v2/assets');
 
@@ -60,13 +61,12 @@ export default async function Crypto() {
   const top10 = await getTop10();
   const btcChange = await getDailyChange('bitcoin');
   const ethChange = await getDailyChange('ethereum');
+  const cardanoChange = await getDailyChange('cardano');
   return (
     <div className={`${inter.className} ${styles.container}`}>
       <span className={styles.tag}>Crypto Tracker</span>
       <div className={styles.wrapper}>
         <div className={styles.info}>
-          <AddCrypto top10={top10} />
-
           <div className={styles.graphs}>
             <Graph change={btcChange} name={btcChange.name} />
             <Graph change={ethChange} name={ethChange.name} />

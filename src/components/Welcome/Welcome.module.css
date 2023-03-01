@@ -1,20 +1,28 @@
 .image > img {
   border-radius: 100%;
 }
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .container {
   display: flex;
-  align-items: center;
+  justify-content: flex-start;
+  /* align-items: center; */
   /* justify-content: center; */
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .welcome {
   display: flex;
+  flex-direction: column;
+
+  margin: 0 var(--margin-md);
 }
 
 .welcome > h1 {
-  margin: 0 var(--margin-md);
   text-align: center;
 }
 

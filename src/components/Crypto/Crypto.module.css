@@ -17,7 +17,7 @@
 .symbol {
   font-weight: 200;
   font-size: 0.8rem;
-  margin: 0 var(--margin-sm);
+  margin: var(--margin-sm);
 }
 
 .container {
@@ -64,6 +64,8 @@
 .yourCrypto {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   /* width: 100%; */
 }
 .yourCrypto > div {
