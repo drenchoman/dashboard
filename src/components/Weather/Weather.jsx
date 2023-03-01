@@ -1,7 +1,7 @@
 import React from 'react';
 import { TbTemperatureCelsius } from 'react-icons/tb';
 import Image from 'next/image';
-import styles from './Weather.module.css';
+import styles from '@/components/Weather/Weather.module.css';
 import { Inter } from '@next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });

@@ -7,7 +7,7 @@ import SpotifyArtists from '@/components/Spotify/SpotifyArtists';
 import Theme from '@/components/Theme/Theme';
 import Welcome from '@/components/Welcome/Welcome';
 import PremLeague from '@/components/PremLeague/PremLeague';
-import ALeague from '@/components/ALeague/Aleague';
+import ALeague from '@/components/ALeague/ALeague';
 import Motivation from '@/components/Motivation/Motivation';
 import Crypto from '@/components/Crypto/Crypto';
 
