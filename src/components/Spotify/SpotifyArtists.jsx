@@ -40,7 +40,6 @@ export default async function SpotifyArtists() {
       <div className={styles.container}>
         {artists.map((artist, i) => (
           <div className={styles.artist} key={i}>
-            <span className={styles.ranking}>#{i + 1}</span>
             <Image
               src={artist.coverImage.url}
               width={100}

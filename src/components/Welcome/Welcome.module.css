@@ -5,12 +5,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  /* width: 100%;
+  max-width: 50px; */
 }
 
 .container {
   display: flex;
   justify-content: flex-start;
   /* align-items: center; */
+  width: 100%;
   /* justify-content: center; */
   flex-direction: row;
 }

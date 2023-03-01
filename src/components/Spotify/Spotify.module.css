@@ -2,7 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  margin: 0 var(--margin-lg);
   /* justify-content: center; */
   height: 100%;
 }
@@ -19,14 +18,14 @@
   align-items: center;
   /* width: 100%; */
   /* justify-content: space-evenly; */
-  margin: var(--margin-sm);
+  margin: var(--margin-md) 0;
   padding: var(--padding-sm);
 
   position: relative;
 }
 
 .artist > h3 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 300;
   margin: 0.5rem;
 }
