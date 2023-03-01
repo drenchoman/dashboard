@@ -3,3 +3,19 @@
   font-weight: 600;
   margin: 0.25rem 0;
 }
+
+.green {
+  color: lawngreen;
+  margin: 0 var(--margin-sm);
+}
+
+.red {
+  color: red;
+  margin: 0 var(--margin-sm);
+}
+
+.symbol {
+  font-weight: 200;
+  font-size: 0.8rem;
+  margin: 0 var(--margin-sm);
+}
