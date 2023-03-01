@@ -38,7 +38,9 @@ export default async function Home() {
             <ALeague />
           </div>
         </section>
-        <Crypto />
+        <section className={styles.crypto}>
+          <Crypto />
+        </section>
       </section>
       <section className={styles.right}>
         <div className={styles.weather}>

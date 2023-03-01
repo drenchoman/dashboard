@@ -1,23 +1,23 @@
-import React from 'react';
+'use client';
+import React, { useState, Suspense } from 'react';
+import NewCryp from './NewCryp';
+import styles from './Crypto.module.css';
 
-async function getData() {
-  const res = await fetch('https://api.coincap.io/v2/assets');
-
-  if (!res.ok) {
-    throw new Error('Failed to fetch data');
-  }
-
-  const { data } = await res.json();
-  const top2 = data.slice(0, 2).map((cryp) => ({
-    rank: cryp.rank,
-    symbol: cryp.symbol,
-    name: cryp.name,
-    price: cryp.priceUsd,
-    change: cryp.changePercent24Hr,
-  }));
-  return top2;
-}
-
-export default function AddCrypto() {
-  return <div>Button</div>;
+export default function AddCrypto({ top10 }) {
+  const [show, setShow] = useState(false);
+  return (
+    <div className={styles.addWrapper}>
+      <h3>Click to add</h3>
+      {top10.map((cryp, i) => (
+        <div key={i}>
+          <button>
+            <h4>
+              {cryp.name}{' '}
+              <span className={styles.symbol}>{cryp.symbol}</span>
+            </h4>
+          </button>
+        </div>
+      ))}
+    </div>
+  );
 }
