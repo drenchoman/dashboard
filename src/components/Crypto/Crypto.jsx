@@ -23,9 +23,9 @@ async function getData() {
   return top2;
 }
 
-async function getDailyChange() {
+async function getDailyChange(coin) {
   const res = await fetch(
-    'https://api.coincap.io/v2/assets/bitcoin/history?interval=h1'
+    `https://api.coincap.io/v2/assets/${coin}/history?interval=h1`
   );
 
   if (!res.ok) {
@@ -35,19 +35,23 @@ async function getDailyChange() {
   const history = data.slice(0, 24).map((d) => ({
     price: Number(d.priceUsd),
   }));
+  history.name = coin;
   return history;
 }
 
 export default async function Crypto() {
   const data = await getData();
-  const btcChange = await getDailyChange();
-  console.log(btcChange.length);
-
+  const btcChange = await getDailyChange('bitcoin');
+  const ethChange = await getDailyChange('ethereum');
   return (
     <div className={inter.className}>
       <span className={styles.tag}>Crypto Tracker</span>
       <div>
-        <Graph change={btcChange} />
+        <div className={styles.graphs}>
+          <Graph change={btcChange} name={btcChange.name} />
+          <Graph change={ethChange} name={ethChange.name} />
+        </div>
+        <button>Hello</button>
         {data.map((cryp) => (
           <div key={cryp.rank}>
             <h3>

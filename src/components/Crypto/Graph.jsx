@@ -22,28 +22,54 @@ ChartJS.register(
   Legend
 );
 
-const options = {
-  responsive: true,
-  plugins: {
-    legned: {
-      position: 'top',
+export default function Graph({ change, name }) {
+  const options = {
+    responsive: true,
+    plugins: {
+      legned: {
+        position: 'top',
+      },
+      title: {
+        display: false,
+        text: name,
+      },
     },
-    title: {
-      display: true,
-      text: 'test',
-    },
-  },
-};
+  };
 
-export default function Graph({ change }) {
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
   const [chartData, setChartData] = useState({
     labels: [
-      1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
-      19, 20, 21, 22, 23, 24,
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
     ],
     datasets: [
       {
-        label: 'Test',
+        label: `${capitalizeFirstLetter(name)} Last 24 hrs`,
         data: change.map((d) => Number(d.price)),
         borderColor: 'rgb(255, 99, 132)',
         backgroundColor: 'rgba(255, 99, 132, 0.5)',
