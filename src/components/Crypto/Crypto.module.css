@@ -28,6 +28,7 @@
   padding: var(--padding-md);
   border-radius: var(--border-radius);
   overflow: scroll;
+  border: 2px solid black;
 }
 
 .wrapper {
@@ -90,4 +91,10 @@
 
 .addWrapper > div > button {
   width: 100%;
+}
+
+@media screen and (max-width: 420px) {
+  .info {
+    flex-direction: column;
+  }
 }

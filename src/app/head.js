@@ -1,7 +1,7 @@
 export default function Head() {
   return (
     <>
-      <title>Dashboard</title>
+      <title>Dashboard | Oscar</title>
       <meta
         content="width=device-width, initial-scale=1"
         name="viewport"
