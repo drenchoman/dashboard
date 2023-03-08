@@ -53,6 +53,7 @@
 }
 .stats > ul {
   padding: 0;
+  text-align: center;
 }
 
 .stats > ul > li {

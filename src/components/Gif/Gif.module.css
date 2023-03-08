@@ -1,5 +1,6 @@
 .tag {
   font-size: 0.6rem;
   font-weight: 600;
-  margin: 0.25rem 0;
+  position: relative;
+  bottom: 0.25rem;
 }

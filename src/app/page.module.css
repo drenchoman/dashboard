@@ -1,6 +1,6 @@
 .grid {
   display: grid;
-  grid-template-columns: 25% 1fr 23%;
+  /* grid-template-columns: 25% 1fr 23%; */
   grid-template-rows: 1fr;
   grid-template-areas:
     'nav main right'
@@ -140,11 +140,11 @@
   overflow: scroll;
 }
 
-@media screen and (max-width: 1366) {
+/* @media screen and (max-width: 1366) {
   .grid {
     grid-template-columns: 25% 1fr 25%;
   }
-}
+} */
 
 @media screen and (max-width: 420px) {
   .grid {
