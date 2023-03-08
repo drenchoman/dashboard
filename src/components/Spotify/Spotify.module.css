@@ -74,3 +74,12 @@
   font-size: 1rem;
   font-weight: 200;
 }
+
+@media screen and (max-width: 420px) {
+  .container > * {
+    margin: 0 var(--margin-md);
+  }
+  .artist > h3 {
+    margin: 0 var(--margin-lg);
+  }
+}
