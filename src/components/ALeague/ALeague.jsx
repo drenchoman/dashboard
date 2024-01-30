@@ -18,12 +18,12 @@ async function getData() {
     url: team.team.logos[0].href,
     gamesPlayed: team.stats[0].value,
     losses: team.stats[1].value,
-    points: team.stats[2].value,
-    goalsAgainst: team.stats[3].value,
-    goalsFor: team.stats[4].value,
-    draws: team.stats[5].value,
-    wins: team.stats[6].value,
-    goalDifference: team.stats[8].value,
+    points: team.stats[3].value,
+    goalsAgainst: team.stats[4].value,
+    goalsFor: team.stats[5].value,
+    draws: team.stats[6].value,
+    wins: team.stats[7].value,
+    goalDifference: team.stats[2].value,
   }));
   return standings;
 }
