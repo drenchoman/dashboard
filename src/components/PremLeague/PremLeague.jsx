@@ -19,12 +19,12 @@ async function getData() {
     url: team.team.logos[0].href,
     gamesPlayed: team.stats[0].value,
     losses: team.stats[1].value,
-    points: team.stats[2].value,
-    goalsAgainst: team.stats[3].value,
-    goalsFor: team.stats[4].value,
-    draws: team.stats[5].value,
-    wins: team.stats[6].value,
-    goalDifference: team.stats[8].value,
+    points: team.stats[3].value,
+    goalsAgainst: team.stats[4].value,
+    goalsFor: team.stats[5].value,
+    draws: team.stats[6].value,
+    wins: team.stats[7].value,
+    goalDifference: team.stats[2].value,
   }));
   return standings;
 }
@@ -44,7 +44,7 @@ export default async function PremLeague() {
             <th>L</th>
             <th>GF</th>
             <th>GA</th>
-
+            <th>GD</th>
             <th>Pts</th>
           </tr>
         </thead>
@@ -66,9 +66,9 @@ export default async function PremLeague() {
               <td>{d.draws}</td>
               <td>{d.losses}</td>
               <td>{d.goalsFor}</td>
-
-              <td>{d.points}</td>
               <td>{d.goalsAgainst}</td>
+              <td>{d.goalDifference}</td>
+              <td>{d.points}</td>
             </tr>
           ))}
         </tbody>

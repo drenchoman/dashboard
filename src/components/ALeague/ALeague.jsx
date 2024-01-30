@@ -6,7 +6,7 @@ import { Inter } from '@next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 async function getData() {
   const res = await fetch(
-    'https://api-football-standings.azharimm.dev/leagues/aus.1/standings?season=2022'
+    'https://api-football-standings.azharimm.dev/leagues/aus.1/standings?season=2023'
   );
 
   if (!res.ok) {
