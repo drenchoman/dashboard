@@ -32,7 +32,7 @@ export default async function ALeague() {
   const data = await getData();
   return (
     <div className={inter.className}>
-      <span className={styles.tag}>A League Table</span>
+      <span className={styles.tag}>A League Table 23/24</span>
       <table className={styles.table}>
         <thead>
           <tr>
