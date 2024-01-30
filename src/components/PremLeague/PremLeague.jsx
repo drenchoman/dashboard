@@ -6,7 +6,7 @@ import { Inter } from '@next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 async function getData() {
   const res = await fetch(
-    'https://api-football-standings.azharimm.dev/leagues/eng.1/standings?season=2022'
+    'https://api-football-standings.azharimm.dev/leagues/eng.1/standings?season=2023'
   );
 
   if (!res.ok) {
@@ -33,7 +33,7 @@ export default async function PremLeague() {
   const data = await getData();
   return (
     <div className={inter.className}>
-      <span className={styles.tag}>Premier League Table</span>
+      <span className={styles.tag}>Premier League Table 23/24</span>
       <table className={styles.table}>
         <thead>
           <tr>
@@ -44,7 +44,7 @@ export default async function PremLeague() {
             <th>L</th>
             <th>GF</th>
             <th>GA</th>
-            <th>GD</th>
+
             <th>Pts</th>
           </tr>
         </thead>
@@ -66,9 +66,9 @@ export default async function PremLeague() {
               <td>{d.draws}</td>
               <td>{d.losses}</td>
               <td>{d.goalsFor}</td>
-              <td>{d.goalsAgainst}</td>
-              <td>{d.goalDifference}</td>
+
               <td>{d.points}</td>
+              <td>{d.goalsAgainst}</td>
             </tr>
           ))}
         </tbody>
